@@ -1,0 +1,134 @@
+
+
+/* Theme Variables: */
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --primary-bg: #333;
+  --secondary-bg: #444;
+  --input-bg: #222;
+  --input-border: #555;
+  --border-color: #fff;
+  --hover-bg: #666;
+  --grid-gap: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+/* CSS Grid */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: var(--grid-gap);
+  border: 1px solid var(--border-color);
+  padding: var(--grid-gap);
+}
+
+/* Grid areas */
+.div_header { grid-area: 1 / 1 / 2 / 6; }
+.div_body_text { grid-area: 2 / 1 / 3 / 6; }
+.div_form { grid-area: 3 / 1 / 5 / 3; }
+.div_table { grid-area: 3 / 3 / 5 / 6; }
+.div_footer { grid-area: 5 / 1 / 6 / 6; }
+
+/* Responsive grid: single column */
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+  }
+  .div_header,
+  .div_body_text,
+  .div_form,
+  .div_table,
+  .div_footer {
+    grid-area: auto;
+  }
+}
+
+/* Header image */
+.my_cover,
+.header_img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: relative;
+}
+
+/* Superstar images */
+.superstar-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Body text styling */
+.bodyText p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Form styling */
+label,
+input,
+button {
+  display: block;
+  margin: 10px auto;
+  font-size: 1rem;
+}
+
+input {
+  padding: 8px;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  background: var(--secondary-bg);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--hover-bg);
+}
+
+/* Table Styling */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 800px;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+th {
+  background: var(--primary-bg);
+}

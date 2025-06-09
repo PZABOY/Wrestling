@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top of the ropes | pza </title>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="loadData()">
+
+  <div class="parent">
+    <div class="div_header">
+      <div class="header_img">
+
+        <img class="my_cover" src="assets_task_01jrcp3p4bfcra6xyy4z3g6rhe_img_0.webp">
+
+      </div>
+
+      <br>
+      <br>
+
+    </div>
+    <div class="div_body_text">
+      <div class="bodyText">
+        <p>Ladies and Gentlemen, my name is Paul Heyman.<br>
+          Actually, I'm pza - a junior full-stack developer with a passion for wrestling!</p>
+        <br>
+        <p>Check out my DEV skills: the ultimate list of our favorite wrestlers, <br> top moves, and promos. Now add
+          yours:</p>
+        <br>
+      </div>
+
+    </div>
+
+    <div class="div_form">
+      <label> Superstar name: </label>
+      <input type="text" id="nameTextBox">
+
+      <label>Link to pic </label>
+      <input type="text" id="imageUrlTextBox">
+
+
+
+      <label>Best storyline \ feud VS:</label>
+      <input type="text" id="storyTextBox">
+
+
+
+      <label>Link to YT </label>
+      <input type="text" id="youtubeUrlTextBox">
+
+      <button onclick="addSuperstar()"> Lt's GO!</button>
+
+    </div>
+    <div class="div_table">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Superstar</th>
+            <th>Pic</th>
+            <th>Storyline</th>
+            <th>YouTube</th>
+
+          </tr>
+        </thead>
+        <tbody id="containerTableBody">
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+    <div class="div_footer">
+      <footer>
+        <hr>
+        <br>
+        <br>
+        Copyright 2013-2025 Eliav Mendelsohn | PZA
+        <br>
+        <br>
+      </footer>
+
+    </div>
+  </div>
+</body>
+
+</html>
